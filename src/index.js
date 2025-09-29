@@ -18,6 +18,8 @@ nameForm.addEventListener('submit', function (e) {
             return response.json();
         })
         .then((data) => {
+            console.log(data);
+
             let output = '';
 
             if (data) {
@@ -47,6 +49,8 @@ userForm.addEventListener('submit', function (e) {
             return response.json();
         })
         .then((data) => {
+            console.log(data);
+
             let output = '';
 
             if (data) {
