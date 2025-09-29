@@ -111,7 +111,7 @@ const onRequest = (req, res) => {
             break;
 
         default:
-            if (req.method === 'HEAD') {F
+            if (req.method === 'HEAD') {
                 jsonResponses.notFoundMeta(req, res);
             } else {
                 jsonResponses.notFound(req, res);

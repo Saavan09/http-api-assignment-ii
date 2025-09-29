@@ -29,7 +29,7 @@ const addUser = (request, response, body) => {
     if (!body.name || !body.age) {
         const responseJSON = {
             message: 'Name and age are both required.',
-            id: 'missingParams',
+            id: 'badRequest',
         };
         return respondJSON(request, response, 400, responseJSON);
     }
@@ -46,6 +46,7 @@ const addUser = (request, response, body) => {
     if (responseCode === 201) {
         const responseJSON = {
             message: 'Created Successfully',
+            id: 'Success'
         };
         return respondJSON(request, response, responseCode, responseJSON);
     }
